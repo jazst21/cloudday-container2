@@ -9,7 +9,8 @@ type: Load Balanced Web Service
 # Distribute traffic to your service.
 http:
 #  path: 'api/markdown'
-  path: 'home'
+#  path: 'home'
+  path: '/'
   healthcheck: '/health'
 
 # Configuration for your containers and service.
