@@ -55,7 +55,7 @@ def save_data(markdown, html):
 @app.route('/home', methods=['GET'])
 def home():
     data = {"status": "ok"}
-    return "hellow flask app on copilot aws with CICD Pipeline github commits", 200
+    return "changes made on github to ecs", 200
 
 
 @app.route('/health', methods=['GET'])
