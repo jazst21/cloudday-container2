@@ -1,4 +1,4 @@
-copilot init --app module2 --dockerfile svc-api-markdown/Dockerfile --name svc-api-markdown --type  "Load Balanced Web Service"
+copilot init --app cloudday --dockerfile svc-api-markdown/Dockerfile --name svc-api-markdown --type  "Load Balanced Web Service"
 copilot env init --name staging --default-config --profile default
 copilot env deploy --name staging
 copilot storage init -t DynamoDB -n markdown-table --partition-key ID:S --no-lsi --no-sort -w svc-api-markdown
@@ -15,7 +15,7 @@ cat "Hello pipeline!" > test-pipeline
 copilot pipeline status
 -----
 copilot pipeline delete --delete-secret --name module1
-copilot app delete
+copilot app delete module2
 copilot env delete production
 copilot env delete staging
 ----
