@@ -6,10 +6,10 @@ copilot svc deploy --name svc-api-markdown2 --env staging2
 copilot svc show --name svc-api-markdown2
 -----
 #copilot pipeline init --name module2 --url https://github.com/jazst21/cloudday-container.git --git-branch main --environments staging,production --pipeline-type Workloads
-copilot pipeline init --name cloudday2 --url https://github.com/jazst21/cloudday-container2.git --git-branch main --environments staging --pipeline-type Workloads
+copilot pipeline init --name cloudday2 --url https://github.com/jazst21/cloudday-container2.git --git-branch main --environments staging2 --pipeline-type Workloads
 git add copilot/
 git commit -m "Add copilot files"
-git push -u origin main
+git push -u origin2 main
 copilot pipeline deploy
 cat "Hello pipeline!" > test-pipeline
 copilot pipeline status
