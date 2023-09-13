@@ -4,6 +4,7 @@ copilot env deploy --name staging2
 copilot storage init -t DynamoDB -n markdown-table2 --partition-key ID:S --no-lsi --no-sort -w svc-api-markdown2
 copilot svc deploy --name svc-api-markdown2 --env staging2
 copilot svc show --name svc-api-markdown2
+curl -X POST http://cloud-Publi-1KFM1K14QATIU-910230663.ap-southeast-1.elb.amazonaws.com/api/markdown/process -d '{"text":"# Hello world from AWS Copilot!"}' --header "Content-type: application/json"
 -----
 #copilot pipeline init --name module2 --url https://github.com/jazst21/cloudday-container.git --git-branch main --environments staging,production --pipeline-type Workloads
 copilot pipeline init --name cloudday2 --url https://github.com/jazst21/cloudday-container2.git --git-branch main --environments staging2 --pipeline-type Workloads
